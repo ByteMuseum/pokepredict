@@ -14,22 +14,8 @@ RUN . venv/bin/activate
 
 RUN python3 -m pip install --upgrade pip --break-system-packages
 
-RUN pip3 install --no-cache-dir -r requirements.txt --break-system-packages
+RUN pip3 install -r requirements.txt --break-system-packages
 
 EXPOSE 5000
 
 CMD ["sh", "entrypoint.sh"]
-
-
-
-# FROM python:3.12
-
-# WORKDIR /pokepredict
-
-# COPY . /pokepredict
-
-# RUN pip install --no-cache-dir -r requirements.txt
-
-# EXPOSE 5000
-
-# CMD ["sh", "entrypoint.sh"]
