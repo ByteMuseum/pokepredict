@@ -12,9 +12,9 @@ RUN python3 -m venv venv
 
 RUN . venv/bin/activate
 
-RUN python -m pip install --upgrade pip --break-system-packages
+RUN python3 -m pip install --upgrade pip --break-system-packages
 
-RUN pip install --no-cache-dir -r requirements.txt --break-system-packages
+RUN pip3 install --no-cache-dir -r requirements.txt --break-system-packages
 
 EXPOSE 5000
 
