@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-RUN apt-get update && apt-get install -y python3 python3-pip libhdf5-dev
+RUN apt-get update && apt-get install -y python3 python3-pip libhdf5-dev python3.12-venv
 
 WORKDIR /pokepredict
 
@@ -8,8 +8,6 @@ COPY . /pokepredict
 
 ENV HDF5_DIR=/usr/lib/aarch64-linux-gnu/hdf5/serial
 
-
-# Create a virtual environment and activate it
 RUN python3 -m venv venv
 
 RUN . venv/bin/activate
