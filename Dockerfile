@@ -15,7 +15,7 @@ RUN python3 -m venv venv
 
 RUN . venv/bin/activate
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt --break-system-packages
 
 EXPOSE 5000
 
