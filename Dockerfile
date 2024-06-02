@@ -6,10 +6,7 @@ WORKDIR /pokepredict
 
 COPY . /pokepredict
 
-# print the libhdf5 path
-RUN dpkg -L libhdf5-dev
-
-
+ENV HDF5_DIR=/usr/lib/aarch64-linux-gnu/hdf5/serial
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
