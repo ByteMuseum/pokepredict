@@ -29,6 +29,11 @@ class_names = np.load("classnames.npy")
 app = Flask(__name__)
 
 
+@app.route("/")
+def home():
+    return jsonify({"message": "Welcome to PokePredict"})
+
+
 @app.route("/predict", methods=["POST"])
 def predict():
     if request.headers.get("auth") in API_TOKENS:
