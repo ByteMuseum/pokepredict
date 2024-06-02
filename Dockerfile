@@ -6,7 +6,7 @@ WORKDIR /pokepredict
 
 COPY . /pokepredict
 
-ENV HDF5_DIR=/usr/lib/x86_64-linux-gnu/hdf5/serial
+ENV HDF5_DIR=/usr/lib/arm-linux-gnueabihf/hdf5/serial
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
