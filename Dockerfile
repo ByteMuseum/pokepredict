@@ -8,12 +8,13 @@ COPY . /pokepredict
 
 ENV HDF5_DIR=/usr/lib/aarch64-linux-gnu/hdf5/serial
 
-RUN python3 -m pip install --upgrade pip
 
 # Create a virtual environment and activate it
 RUN python3 -m venv venv
 
 RUN . venv/bin/activate
+
+RUN python3 -m pip install --upgrade pip
 
 RUN pip3 install --no-cache-dir -r requirements.txt --break-system-packages
 
